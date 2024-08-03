@@ -1,12 +1,14 @@
+import { Link } from "react-router-dom";
 import Logo from "../../assets/icons/logo";
+
 import { Box, Button } from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 
-interface FullNavProps {
+interface MobileNavbarProps {
   toggleMobileMenu: () => void;
 }
 
-const MobileNavbar: React.FC<FullNavProps> = ({ toggleMobileMenu }) => {
+const MobileNavbar: React.FC<MobileNavbarProps> = ({ toggleMobileMenu }) => {
   return (
     <Box
       sx={{
@@ -18,7 +20,9 @@ const MobileNavbar: React.FC<FullNavProps> = ({ toggleMobileMenu }) => {
         p: 1,
       }}
     >
-      <Logo width={130} height={34} fillColor="white" />
+      <Link to="/" style={{ marginTop: "5px" }}>
+        <Logo width={130} height={34} fillColor="white" />
+      </Link>
       <Button onClick={toggleMobileMenu}>
         <MenuIcon sx={{ fontSize: "30px" }} />
       </Button>

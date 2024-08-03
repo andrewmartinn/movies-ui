@@ -1,14 +1,17 @@
+import { useState } from "react";
+import { Outlet } from "react-router-dom";
+
+import Sidebar from "../components/common/Sidebar";
+import MobileNavbar from "../components/common/MobileNavbar";
+
 import {
   Box,
+  Container,
   CssBaseline,
   Theme,
   useMediaQuery,
   useTheme,
 } from "@mui/material";
-import { useState } from "react";
-import { Outlet } from "react-router-dom";
-import Sidebar from "../components/common/Sidebar";
-import MobileNavbar from "../components/common/MobileNavbar";
 
 const sidebarWidth = 250;
 
@@ -45,7 +48,9 @@ const AppLayout: React.FC = () => {
         {isMobile && !mobileMenu && (
           <MobileNavbar toggleMobileMenu={toggleMobileMenu} />
         )}
-        <Outlet />
+        <Container>
+          <Outlet />
+        </Container>
       </Box>
     </Box>
   );

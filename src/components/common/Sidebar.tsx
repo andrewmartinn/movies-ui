@@ -1,4 +1,6 @@
+import { Link, useLocation } from "react-router-dom";
 import Logo from "../../assets/icons/logo";
+
 import {
   Box,
   Drawer,
@@ -12,7 +14,6 @@ import AppsIcon from "@mui/icons-material/Apps";
 import MovieIcon from "@mui/icons-material/Movie";
 import LiveTvIcon from "@mui/icons-material/LiveTv";
 import BookmarksIcon from "@mui/icons-material/Bookmarks";
-import { Link, useLocation } from "react-router-dom";
 
 interface SidebarProps {
   sidebarWidth?: number;
@@ -132,11 +133,11 @@ const SidebarContent: React.FC<SidebarContentProps> = ({
   return (
     <Box>
       {!isMobile && (
-        <Box sx={{ pt: 2, px: 4 }}>
+        <Box sx={{ p: 4 }}>
           <Logo width={135} height={34} fillColor="white" />
         </Box>
       )}
-      <List sx={{ pt: 10 }}>
+      <List sx={{ pt: 5 }}>
         {SidebarLinks.map((item) => (
           <ListItem key={item.id}>
             <ListItemButton
