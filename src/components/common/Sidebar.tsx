@@ -12,7 +12,7 @@ import AppsIcon from "@mui/icons-material/Apps";
 import MovieIcon from "@mui/icons-material/Movie";
 import LiveTvIcon from "@mui/icons-material/LiveTv";
 import BookmarksIcon from "@mui/icons-material/Bookmarks";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 interface SidebarProps {
   sidebarWidth?: number;
@@ -127,6 +127,8 @@ const SidebarContent: React.FC<SidebarContentProps> = ({
   isMobile,
   toggleMobileMenu,
 }) => {
+  const { pathname } = useLocation();
+
   return (
     <Box>
       {!isMobile && (
@@ -147,7 +149,9 @@ const SidebarContent: React.FC<SidebarContentProps> = ({
                 },
               }}
             >
-              <ListItemIcon sx={{ color: "white" }}>
+              <ListItemIcon
+                sx={{ color: pathname === item.href ? "#a259cd" : "white" }}
+              >
                 <Box
                   sx={{
                     p: 1,
