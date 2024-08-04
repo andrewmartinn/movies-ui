@@ -56,8 +56,9 @@ const Home: React.FC = () => {
         ) : (
           <Box width="100%">
             <Typography variant="h5" component="h2" my={4} fontWeight={500}>
-              Search Results for {searchTerm}
+              Search Results for "{searchTerm}"
             </Typography>
+            <MovieList searchResults={searchResults} />
           </Box>
         )}
       </Box>
