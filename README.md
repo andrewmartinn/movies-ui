@@ -1,30 +1,65 @@
-# React + TypeScript + Vite
+# Movie App | Material UI
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+MovieApp is a React application that allows users to browse, search, and bookmark movies and TV shows. The app leverages mock data to display trending and recommended content, providing a seamless user experience with a mobile-responsive design.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Vite](https://vitejs.dev/): Fast, opinionated web dev build tool
+- [TypeScript](https://www.typescriptlang.org/): Typed superset of JavaScript
+- [React](https://reactjs.org/): JavaScript library for building user interfaces
+- [Material UI](https://mui.com/): Popular React UI framework
+- [React Router DOM](https://reactrouter.com/): Declarative routing for React applications
+- [Material Icons](https://mui.com/material-ui/material-icons/): Collection of Google's Material Icons
 
-## Expanding the ESLint configuration
+## Project Features
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- **Trending and Recommend Movies/Shows:** Displays trending and recommended movies and shows by filtering data
+- **Multiple pages:** The app has multiple pages including home, movies, tv shows and bookmarks page the page data is dynamically changed acording the current page.
+- **Bookmark Functionality:** Allows users to bookmark movies and TV shows.
+- **Search Functionality:** Allows users to search for movies and TV shows.
+- **Responsive Design:** Ensures the application is optimized for various screen sizes and devices.
+- **Context API:** Provides global state management for movie data across components.
 
-- Configure the top-level `parserOptions` property like this:
+## Project Outcomes
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json', './tsconfig.app.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
+- **Material UI:** Utilized Material UI for a consistent and responsive user interface, making the app visually appealing and user-friendly. Learned how to use Material UI to create custom components and interfaces which are responsive and typesafe. Researched on various component APIs for implementing additional functionlties like Button API and Input API
+
+- **Context API & useReducer Integration:** Implemented Context API to manage global movie data efficiently across components. Updated state using reducer function with which enables performant state updates.
+
+- **TypeScript Utilization:** Leveraged TypeScript for type safety and improved developer experience, reducing runtime errors and enhancing code maintainability.
+
+## Project Setup
+
+This project was bootstrapped with [Vite](https://vitejs.dev/guide/).
+
+To get started you need to:
+
+- Clone the project
+- Install listed dependencies
+- Run available scripts
+
+### Install dependencies
+
+```
+yarn install
 ```
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+### Run React dev server
+
+```
+yarn dev
+```
+
+### To build for production
+
+```
+yarn build
+```
+
+## Deployment
+
+To deploy this project run
+
+```
+yarn run deploy
+```
