@@ -9,7 +9,6 @@ interface TrendingMoviesListProps {
 const TrendingMoviesList: React.FC<TrendingMoviesListProps> = ({
   trendingMovies,
 }) => {
-  console.log("COMPONENT: TrendingMoviesList", trendingMovies);
   return (
     <Box
       className="trending-movies"

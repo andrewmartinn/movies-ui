@@ -30,7 +30,6 @@ const TrendingMovieCard: React.FC<TrendingMovieCardProps> = ({ movie }) => {
         sx={{
           padding: 0,
           position: "relative",
-
           display: "flex",
         }}
       >
