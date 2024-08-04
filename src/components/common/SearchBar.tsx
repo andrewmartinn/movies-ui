@@ -1,26 +1,16 @@
-import { SetStateAction, useState } from "react";
+import { SetStateAction } from "react";
 
 import { IconButton, InputBase, Paper } from "@mui/material";
 import SearchIcon from "@mui/icons-material/Search";
 
 interface SearchBarProps {
+  searchTerm: string;
   setSearchTerm: React.Dispatch<SetStateAction<string>>;
 }
 
-const SearchBar: React.FC<SearchBarProps> = ({ setSearchTerm }) => {
-  const [text, setText] = useState<string>("");
-
-  const handleSearch = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === "Enter" && text.trim() !== "") {
-      e.preventDefault();
-      setSearchTerm(text);
-      setText("");
-    }
-  };
-
+const SearchBar: React.FC<SearchBarProps> = ({ searchTerm, setSearchTerm }) => {
   return (
     <Paper
-      component="form"
       sx={{
         mt: 3,
         padding: "6px",
@@ -41,9 +31,8 @@ const SearchBar: React.FC<SearchBarProps> = ({ setSearchTerm }) => {
           ml: 1,
           flex: 1,
         }}
-        value={text}
-        onChange={(e) => setText(e.target.value)}
-        onKeyDown={handleSearch}
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
       />
     </Paper>
   );

@@ -6,6 +6,7 @@ import Movies from "./pages/Movies";
 import TvShows from "./pages/TvShows";
 import Bookmarks from "./pages/Bookmarks";
 import Home from "./pages/Home";
+import MovieProvider from "./context/MovieContext";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
 ]);
 
 const App: React.FC = () => {
-  return <RouterProvider router={router} />;
+  return (
+    <MovieProvider>
+      <RouterProvider router={router} />
+    </MovieProvider>
+  );
 };
 export default App;
