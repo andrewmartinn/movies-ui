@@ -133,9 +133,11 @@ const SidebarContent: React.FC<SidebarContentProps> = ({
   return (
     <Box>
       {!isMobile && (
-        <Box sx={{ p: 4 }}>
-          <Logo width={135} height={34} fillColor="white" />
-        </Box>
+        <Link to="/">
+          <Box sx={{ p: 4 }}>
+            <Logo width={135} height={34} fillColor="white" />
+          </Box>
+        </Link>
       )}
       <List sx={{ pt: 5 }}>
         {SidebarLinks.map((item) => (
