@@ -4,3 +4,12 @@
   box-sizing: border-box;
   font-family: "Plus Jakarta Sans Variable", sans-serif;
 }
+
+.trending-movies::-webkit-scrollbar {
+  height: 6px;
+}
+
+.trending-movies::-webkit-scrollbar-thumb {
+  background-color: #2a3349;
+  border-radius: 10px;
+}

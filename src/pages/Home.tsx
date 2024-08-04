@@ -13,8 +13,12 @@ const Home: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [searchResults, setSearchResults] = useState<MovieDataType[]>([]);
 
-  const trendingList = movies.filter((movie) => movie.isTrending === true);
-  const recommendList = movies.filter((movie) => movie.isTrending !== true);
+  const trendingMoviesList = movies.filter(
+    (movie) => movie.isTrending === true
+  );
+  const recommendMoviesList = movies.filter(
+    (movie) => movie.isTrending !== true
+  );
 
   useEffect(() => {
     if (movies) {
@@ -40,13 +44,13 @@ const Home: React.FC = () => {
               <Typography variant="h5" component="h2" my={4} fontWeight={500}>
                 Trending
               </Typography>
-              <TrendingMoviesList />
+              <TrendingMoviesList trendingMovies={trendingMoviesList} />
             </Box>
             <Box width="100%">
               <Typography variant="h5" component="h2" my={4} fontWeight={500}>
                 Recommend For You
               </Typography>
-              <MovieList />
+              <MovieList recommendedMovies={recommendMoviesList} />
             </Box>
           </Box>
         ) : (
