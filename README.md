@@ -2,6 +2,22 @@
 
 MovieApp is a React application that allows users to browse, search, and bookmark movies and TV shows. The app leverages mock data to display trending and recommended content, providing a seamless user experience with a mobile-responsive design.
 
+Homepage
+![movie-ui-home](https://github.com/user-attachments/assets/c950ab42-85a6-4240-a5bc-68cfcba1475d)
+
+Movies page
+![movies-ui-movies](https://github.com/user-attachments/assets/c78fa8d1-71ff-4f4f-8e84-d673d2fece63)
+
+Tv Shows page
+![movies-ui-tv](https://github.com/user-attachments/assets/e4d3766c-3667-43f6-b761-3bb2aeabb054)
+
+Search results
+![movie-ui-search](https://github.com/user-attachments/assets/ce8179d5-8b59-4a18-9183-aca774f09835)
+
+Bookmarks page
+![movie-ui-bookmarks](https://github.com/user-attachments/assets/5e961ef8-4d41-4361-a742-11dc75881cd3)
+
+
 ## Technologies Used
 
 - [Vite](https://vitejs.dev/): Fast, opinionated web dev build tool
